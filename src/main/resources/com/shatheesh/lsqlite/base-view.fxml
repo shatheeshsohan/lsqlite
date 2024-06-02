@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="768.0" prefWidth="1366.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shatheesh.lsqlite.controller.BaseController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <children>
+            <Label fx:id="dbLabel" prefHeight="27.0" prefWidth="518.0" text="db file://">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="dbPathTextField" prefHeight="26.0" prefWidth="1619.0" text="jdbc:sqlite:D:\DownloadsFromChrome\chinook\chinook.db">
+               <HBox.margin>
+                  <Insets right="20.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="connectButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onConnectButton" prefHeight="26.0" prefWidth="110.0" text="Connect" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <ComboBox fx:id="tablesComboBox" minHeight="-Infinity" minWidth="-Infinity" onAction="#onTableSelect" prefWidth="150.0">
+         <VBox.margin>
+            <Insets bottom="700.0" right="100.0" />
+         </VBox.margin>
+      </ComboBox>
+   </children>
+</VBox>
